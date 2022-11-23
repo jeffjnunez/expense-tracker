@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Expenses from './components/Expenses';
 
 const App = () => {
@@ -28,13 +30,22 @@ const App = () => {
         },
     ];
 
-    return (
-        <div>
-            <h2>Let's get started!</h2>
-            <p>This is also visible.</p>
-            <Expenses expenses={expenses} />
-        </div>
+    // Equivalent to the JSX below.
+    return React.createElement(
+        'div',
+        {},
+        React.createElement('h2', {}, 'Let us begin!'),
+        React.createElement('p', {}, 'This is visible, too.'),
+        React.createElement(Expenses, { expenses: expenses })
     );
+
+    // return (
+    //     <div>
+    //         <h2>Let's get started!</h2>
+    //         <p>This is also visible.</p>
+    //         <Expenses expenses={expenses} />
+    //     </div>
+    // );
 }
 
 export default App;
