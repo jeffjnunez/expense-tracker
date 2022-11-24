@@ -1,6 +1,4 @@
-import React from 'react';
-
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses';
 
 const App = () => {
     const expenses = [
@@ -30,22 +28,13 @@ const App = () => {
         },
     ];
 
-    // Equivalent to the JSX below.
-    return React.createElement(
-        'div',
-        {},
-        React.createElement('h2', {}, 'Let us begin!'),
-        React.createElement('p', {}, 'This is visible, too.'),
-        React.createElement(Expenses, { expenses: expenses })
+    return (
+        <div>
+            <h2>Let's get started!</h2>
+            <p>This is also visible.</p>
+            <Expenses expenses={expenses} />
+        </div>
     );
-
-    // return (
-    //     <div>
-    //         <h2>Let's get started!</h2>
-    //         <p>This is also visible.</p>
-    //         <Expenses expenses={expenses} />
-    //     </div>
-    // );
 }
 
 export default App;
