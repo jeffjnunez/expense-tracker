@@ -14,24 +14,24 @@ const ExpenseForm = () => {
 
     const titleChangeHandler = e => {
         // setEnteredTitle(e.target.value);
-        setUserInput({
-            ...userInput,
+        setUserInput(prev => ({
+            ...prev,
             enteredTitle: e.target.value
-        });
+        }));
     };
     const amountChangeHandler = e => {
         // setEnteredAmount(e.target.value);
-        setUserInput({
-            ...userInput,
+        setUserInput(prev => ({
+            ...prev,
             enteredAmount: e.target.value
-        });
+        }));
     };
     const dateChangeHandler = e => {
         // setEnteredDate(e.target.value);
-        setUserInput({
-            ...userInput,
+        setUserInput(prev => ({
+            ...prev,
             enteredDate: e.target.value
-        });
+        }));
     };
 
     return (
